@@ -25,10 +25,14 @@ const CustomCard = ({ details }) => {
                         </span>
                     </h1>
                 </CardTitle>
-                <CardText>
+                <h6 className="text-primary">Age: {details.dob?.age}</h6>
+                <CardText >
                     <FaMapMarkedAlt />{" "}
                     {details.location?.city}
-                    <p>{details.phone}</p>
+                    <p>
+                        <FaPhone />{" "}
+                        {details.phone}
+                    </p>
                 </CardText>
                 <CardFooter className="text-success">
                     <h6>
@@ -37,7 +41,7 @@ const CustomCard = ({ details }) => {
                     </h6>
                 </CardFooter>
             </CardBody>
-            
+
         </Card>
     )
 }
